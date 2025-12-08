@@ -1,14 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { headers } from "next/headers";
-import { auth } from "@/lib/auth";
-
-// Use Node.js runtime instead of Edge to support @libsql/client
-export const runtime = "nodejs";
 
 export async function middleware(request: NextRequest) {
-  const session = await auth.api.getSession({ headers: await headers() });
+  // Check for session cookie (optimistic check for Edge runtime)
+  // The actual session validation happens in the page/API routes
+  const sessionCookie = request.cookies.get("better-auth.session_token");
 
-  if (!session) {
+  if (!sessionCookie) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
