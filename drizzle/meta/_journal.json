@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1765171559861,
+      "tag": "0000_fluffy_quasimodo",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1765182497432,
+      "tag": "0001_cynical_kitty_pryde",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1765183392215,
+      "tag": "0002_slippery_forge",
+      "breakpoints": true
+    }
+  ]
+}
